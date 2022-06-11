@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../img/favicon.png" type="image/x-icon">
+    <title>Contacto</title>
+    <!--Link de la pagina animacion-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--Link del Boorstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Link de CSS-->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header class="barra__header--i">
+        <div class="barra__header--titulo">
+            <a href="./index.html"><img src="../img/favicon.png" alt="Logo" class="logoin"></a>
+        </div>
+        <nav class="barra__header--menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <img src="../img/barblanco.png" alt="menuBar">
+            </label>
+            <ul>
+                <li><a href="./home.html" class="animar">Home</a></li>
+                <li><a href="./nosotras.html" class="animar">Nosotras</a></li>
+                <li><a href="./productos.html" class="animar">Productos</a></li>
+                <li><a href="./contacto.html" class="animar">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cmain">
+        <h1>Nosotras nos comunicamos</h1>
+        <form class="main__fa">
+            <div class="main__f">
+                <label for="nombre"> Nombre y apellido:
+                    <input type="text" name="nombre" required class="main__input">
+                </label>
+            </div>
+            <div class="main__f">
+                <label for="mail"> Mail:
+                    <input type="email" name="mail" required class="main__input">
+                </label>
+            </div>
+            <div class="main__f">
+                <label for="numero"> Número:
+                    <input type="tel" name="numero" required class="main__input">
+                </label>
+            </div>
+            <div class="main__f">
+                <label for="mensaje"> Mensaje:
+                    <input type="text" name="mensaje" required class="main__men">
+                </label>
+            </div>
+            <div class="main__boton">
+                <input type="submit" value="Enviar" class="main__enviar">
+                <input type="reset" value="Reestablecer" class="main__rees">
+            </div>
+        </form>
+    </main>
+    
+    <footer class="home__footer">
+        <h2 class="footer__titulohm"><a href="./pages/contacto.html">CONTACTO</a></h2>
+        <div class="footer__iconos">
+            <figure><a href="https://www.facebook.com/Press-on-Nails-Salta-233058758625843/" target="_blank"><img src="../img/facebook.png" alt="Seguinos en facebook" height="20" width="20"></a></figure>
+            <figure><a href="https://www.instagram.com/pressonnails.salta/" target="_blank"><img src="../img/instagram.png" alt="Seguinos en instagram" height="20" width="20"></a></figure>
+            <figure><a href="https://wa.me/543875742507" target="_blank"><img src="../img/whatsapp.png" alt="Escribinos por wp" height="20" width="20"></a></figure>
+        </div>
+    </footer>
+</body>
+
+</html>
