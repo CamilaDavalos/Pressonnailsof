@@ -30,6 +30,7 @@
 
 /* Estilos para el INDEX */
 /*Estilo para el header*/
+/*ESTRUCTURA DESKTOP FIRTS*/
 .header {
     top: 0;
     background-color: #e6ddde;
@@ -62,7 +63,6 @@
 .header__menu ul {
     display: flex;
     justify-content: end;
-    position: fixed;
 }
 
 .header__menu ul li {
@@ -160,21 +160,122 @@
     animation-timing-function: ease-in-out;
 }
 
-
 /*_______________________________________________________________________________*/
+
+/* Queries para tablets- vertical */
+@media screen and (max-width:1024px) {
+
+    /* Estilos para el header */
+    .header {
+        height: 6.5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logoin {
+        height: calc(6.5rem - 3px);
+    }
+
+    .header__menu {
+        padding-top: 1rem;
+        margin-right: 1vw;
+    }
+
+    .checkbtn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-right: 1vw;
+    }
+
+    .checkbtn img {
+        height: 4rem;
+    }
+
+    .header__menu ul {
+        flex-direction: column;
+        justify-content: space-evenly;
+        left: 500vw;
+        top: 5rem;
+        width: 100vw;
+        height: 40vh;
+        text-align: center;
+        transition: all .4s ease-in-out;
+        background-color: #ad8f94;
+        z-index: 1;
+        position: fixed
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .header__menu ul li a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 5vw;
+        color: black;
+    }
+
+    /* Estilos para el main */
+    .index__main {
+        height: 102vh;
+    }
+
+    .logo__main {
+        height: 45vh;
+        margin: 4vh 0 4vh 0;
+    }
+
+    .logo__main img {
+        height: 45vh;
+    }
+
+    .carousel {
+        height: 45vh;
+        margin-bottom: 4vh;
+    }
+
+    .imgmain {
+        height: 45vh;
+    }
+
+    /* Estilos para el footer */
+    .footer {
+        height: 7.7rem;
+        align-items: center;
+        padding-right: 0;
+        padding-top: 1.5vw;
+    }
+
+    .footer__titulo {
+        font-size: 4vw;
+    }
+
+    .footer__iconos {
+        width: 4vw;
+        margin-top: 0.5vh
+    }
+
+    .footer__iconos figure img {
+        height: 4vh;
+        width: auto;
+        padding: 0 2vw 0 2vw
+    }
+}
 
 /* Queries para celulares */
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:650px) {
 
-    /* Estilos para el INDEX */
     /* Estilos para el header */
     .header {
         height: 5rem;
         justify-content: space-between;
         align-items: center;
     }
-    .header__titulo a img {
+
+    .logoin {
         height: calc(5rem - 3px);
     }
 
@@ -205,6 +306,7 @@
         transition: all .4s ease-in-out;
         background-color: #ad8f94;
         z-index: 1;
+        position: fixed
     }
 
     #check:checked~ul {
@@ -217,28 +319,33 @@
         font-size: 5vw;
         color: black;
     }
+
     /* Estilos para el main */
-    .index__main{
+    .index__main {
         height: 79vh;
     }
-    .logo__main{
+
+    .logo__main {
         height: 35vh;
         margin: 3vh 0 3vh 0;
     }
-    .logo__main img{
+
+    .logo__main img {
         height: 35vh;
     }
-    .carousel{
+
+    .carousel {
         height: 35vh;
         margin-bottom: 3vh;
     }
-    .imgmain{
+
+    .imgmain {
         height: 35vh;
     }
 
     /* Estilos para el footer */
     .footer {
-        height: 5.7rem;
+        height: 7.2rem;
         align-items: center;
         padding-right: 0;
         padding-top: 1vw;
@@ -257,46 +364,44 @@
         width: auto;
         padding: 0 2vw 0 2vw
     }
-    /*_______________________________________________________________________________*/
-
-    /* Estilos para la página HOME */
-
-    .h__main {
-        grid-template-rows: 1fr 2.7fr;
-    }
-
-    .h__main--figure figcaption {
-        font-size: 7vw;
-        margin: 0;
-    }
-
-    .h__main--imagen {
-        width: 100vw;
-        border-radius: 0;
-    }
-
-    .h__main--texto {
-        width: 95vw;
-    }
-
-    .h__main--texto h2 {
-        font-size: 12.5vw;
-    }
-
-    .h__main--texto p {
-        font-size: 3vw;
-    }
-
 }
+
+/*_______________________________________________________________________________*/
+
+/* Estilos para la página HOME */
+
+.h__main {
+    grid-template-rows: 1fr 2.7fr;
+}
+
+.h__main--figure figcaption {
+    font-size: 7vw;
+    margin: 0;
+}
+
+.h__main--imagen {
+    width: 100vw;
+    border-radius: 0;
+}
+
+.h__main--texto {
+    width: 95vw;
+}
+
+.h__main--texto h2 {
+    font-size: 12.5vw;
+}
+
+.h__main--texto p {
+    font-size: 3vw;
+}
+
 
 /* Estilos para el HOME */
 
 .home {
     background-color: white
 }
-
-
-
 
 /* Estilos para el HOME MAIN */
 
@@ -391,53 +496,53 @@
     color: gray;
 }
 
+/*____________________________________________________________________________________________________________*/
 /* Estilos para el NOSOTRAS*/
 .n__main {
-    position: relative;
-    top: 0;
     background-color: white;
     border-bottom: 3px solid grey;
     overflow: hidden;
+    height: 200vh;
+    display: flex;
 }
 
 .n__main--uno {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 80px 0 20px 0;
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 15vh 0 15vh 0;
+    height: 170vh;
     background-color: rgb(205, 158, 155);
-    box-shadow: 1px 5px 25px rgb(213, 197, 199);
-}
-
-.n__main--uno img {
-    top: 12.5px;
-    left: 0;
-    margin: 10px 50px;
-    height: 400px;
-    width: auto;
-    border-radius: 5%;
-    text-align: right
 }
 
 .n__main--uno h1 {
     font-family: hs;
-    font-size: 100px;
-    top: 150px;
-    margin: 0 100px 0 0;
-    border-radius: 5px;
+    font-size: 8rem;
     color: white;
     text-align: center;
+    top: 0;
 }
 
 .n__main--uno p {
     text-align: justify;
     font-family: garetbook;
-    font-size: 20px;
+    font-size: 1.6rem;
     line-height: 1.5;
     color: white;
     text-align: center;
 }
+.n__main--uno figure{
+    display: flex;
+    justify-content: center;
+}
+.imgmain{
+    height: 80vh;
+    width: auto;
+    border-radius: 5%;
+    text-align: center;
+}
+
+
+
 
 /* Estilos para el PRODUCTO*/
 .p__main {
