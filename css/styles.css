@@ -30,9 +30,9 @@
 
 /* Estilos para el INDEX */
 /*Estilo para el header*/
-.barra__header--i {
+.header {
     top: 0;
-    background-color: rgb(213, 197, 199);
+    background-color: #e6ddde;
     z-index: 1;
     height: 7rem;
     border-bottom: 3px solid grey;
@@ -48,7 +48,7 @@
     justify-items: start;
 }
 
-.barra__header--menu {
+.header__menu {
     margin-bottom: 1.2vh;
     margin-right: 0.3vw;
 }
@@ -59,16 +59,17 @@
     display: none;
 }
 
-.barra__header--menu ul {
+.header__menu ul {
     display: flex;
     justify-content: end;
+    position: fixed;
 }
 
-.barra__header--menu ul li {
+.header__menu ul li {
     list-style-type: none;
 }
 
-.barra__header--menu ul li a {
+.header__menu ul li a {
     margin: 0 1.2vw;
     text-align: center;
     text-decoration: underline bottom;
@@ -82,21 +83,41 @@
 .index__main {
     background-color: white;
     border-bottom: 3px solid grey;
+    height: 180vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.carousel-item {
-    height: 400px;
+.logo__main {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(213, 197, 199);
+    margin: 10vh 0 10vh 0;
+}
+
+.logo__main img {
+    height: 75vh;
+    width: auto;
+}
+
+.carousel {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(213, 197, 199);
+    margin-bottom: 10vh;
 }
 
 .imgmain {
-    height: 400px;
-    width: 650px;
+    height: 75px;
+    width: auto;
 }
 
 /*Estilo para el footer*/
 
-.rfooter {
-    background-color: rgb(213, 197, 199);
+.footer {
+    background-color: #ad8f94;
     height: 7.2rem;
     display: flex;
     flex-direction: column;
@@ -115,17 +136,17 @@
 .footer__titulo a:link,
 .footer__titulo a:visited {
     text-decoration: none;
-    color: gray;
+    color: black;
 }
 
-.rfooter__iconos {
+.footer__iconos {
     margin-top: 1vh;
     display: flex;
     justify-content: space-evenly;
     width: 10vw;
 }
 
-.rfooter__iconos figure img {
+.footer__iconos figure img {
     height: 1.25rem;
     width: 1.25rem;
 }
@@ -134,83 +155,30 @@
 
 /*Animaciones para el head*/
 .animar:hover {
-    animation-name: bounce;
-    animation-duration: 2s;
+    animation-name: pulse;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
 }
 
 
 /*_______________________________________________________________________________*/
 
-/* Query para celulares */
+/* Queries para celulares */
 
 @media screen and (max-width:479px) {
 
     /* Estilos para el INDEX */
     /* Estilos para el header */
-
-
-    .barra__header--i {
+    .header {
         height: 5rem;
         justify-content: space-between;
         align-items: center;
     }
-    /* Estilos para el main */
-
-    .index__main {
-        width: 100vw;
-        height: 70vh;
-    }
-
-    .imgmain {
-        height: 69.5vh;
-        width: 100vw;
-    }
-    
-
-    /* Estilos para el footer */
-
-    .rfooter {
-        align-self: center;
-        margin-right: 0;
-        height: auto;
-    }
-
-    .footer__titulo {
-        font-size: 7vw;
-    }
-
-    .footer__titulo a,
-    .footer__titulo a:link,
-    .footer__titulo a:visited {
-        text-decoration: none;
-        color: gray;
-    }
-
-    .footer__iconos {
-        margin-top: 1vh;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .footer__iconos figure img {
-        height: 6vw;
-        width: 6vw;
-    }
-
-    /* Estilos para el resto de headers */
-
-    .barra__header {
-        height: 5rem;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .barra__header--titulo a img {
+    .header__titulo a img {
         height: calc(5rem - 3px);
     }
 
-    .barra__header--menu {
+    .header__menu {
         padding-top: 1rem;
         margin-right: 1vw;
     }
@@ -226,18 +194,16 @@
         height: 2.5rem;
     }
 
-    .barra__header--menu ul {
-        display: flex;
+    .header__menu ul {
         flex-direction: column;
         justify-content: space-evenly;
-        position: fixed;
         left: 500vw;
         top: 5rem;
         width: 100vw;
         height: 40vh;
         text-align: center;
         transition: all .4s ease-in-out;
-        background-color: rgb(213, 197, 199);
+        background-color: #ad8f94;
         z-index: 1;
     }
 
@@ -245,27 +211,53 @@
         left: 0;
     }
 
-    .barra__header--menu ul li a {
+    .header__menu ul li a {
         text-transform: uppercase;
-        font-weight: bolder;
         text-decoration: none;
-        font-size: 7vw;
+        font-size: 5vw;
+        color: black;
+    }
+    /* Estilos para el main */
+    .index__main{
+        height: 79vh;
+    }
+    .logo__main{
+        height: 35vh;
+        margin: 3vh 0 3vh 0;
+    }
+    .logo__main img{
+        height: 35vh;
+    }
+    .carousel{
+        height: 35vh;
+        margin-bottom: 3vh;
+    }
+    .imgmain{
+        height: 35vh;
     }
 
-    /* Estilos para el resto de footers */
-
-    .rfooter {
-        height: 5.5rem;
-        display: flex;
+    /* Estilos para el footer */
+    .footer {
+        height: 5.7rem;
         align-items: center;
         padding-right: 0;
-        padding-top: 1.5vw;
-
+        padding-top: 1vw;
     }
 
-    .rfooter__iconos {
-        width: 45vw;
+    .footer__titulo {
+        font-size: 5.5vw;
     }
+
+    .footer__iconos {
+        width: 5vw;
+    }
+
+    .footer__iconos figure img {
+        height: 5vw;
+        width: auto;
+        padding: 0 2vw 0 2vw
+    }
+    /*_______________________________________________________________________________*/
 
     /* Estilos para la página HOME */
 
