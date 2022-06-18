@@ -251,88 +251,69 @@
 
 /*_______________________________________________________________________________*/
 /* Estilos para la página HOME */
-.h__main {
-  grid-template-rows: 1fr 2.7fr; }
-
-.h__main--figure figcaption {
-  font-size: 7vw;
-  margin: 0; }
-
-.h__main--imagen {
-  width: 100vw;
-  border-radius: 0; }
-
-.h__main--texto {
-  width: 95vw; }
-
-.h__main--texto h2 {
-  font-size: 12.5vw; }
-
-.h__main--texto p {
-  font-size: 3vw; }
-
-/* Estilos para el HOME */
-.home {
-  background-color: white; }
-
-/* Estilos para el HOME MAIN */
 .home__main {
-  position: relative;
-  top: 0;
-  background-color: white;
+  background-color: ligthen(#cd9e9b, 45%);
   border-bottom: 3px solid grey;
+  display: flex;
+  flex-direction: column;
   overflow: hidden; }
 
 .h__main {
-  position: relative;
-  top: 0;
-  left: 0;
+  display: flex;
+  flex-direction: row;
   margin: 80px 0 20px 0;
-  height: 450px;
+  height: 75vh;
   background-color: #cd9e9b;
   box-shadow: 1px 5px 25px #d5c5c7; }
+  .h__main img {
+    justify-content: flex-start;
+    margin-left: 5%;
+    margin-top: 3%;
+    height: 60vh;
+    width: 52vw;
+    border-radius: 5%; }
+    .h__main img figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-end;
+      font-family: hs;
+      font-size: 5vh;
+      color: white;
+      margin-left: 20%; }
+  .h__main--texto {
+    justify-content: end;
+    height: 60vh;
+    color: white;
+    margin-right: 5%;
+    width: 60vw;
+    align-items: center; }
+    .h__main--texto h2, .h__main--texto h3, .h__main--texto h4 {
+      font-family: hs;
+      font-size: 8vh; }
+    .h__main--texto p {
+      text-align: justify;
+      font-family: garetbook;
+      font-size: 3vh;
+      line-height: 1.5; }
 
-.h__main--imagen {
-  position: relative;
-  top: 12.5px;
-  left: 0;
-  margin: 10px 50px;
-  height: 400px;
-  width: auto;
-  border-radius: 5%; }
+@media screen and (max-width: 1024px) {
+  .h__main {
+    flex-direction: column;
+    justify-content: center;
+    height: auto; } }
 
-.h__main--texto {
-  position: absolute;
-  top: 150px;
-  left: 800px;
-  height: 800px;
-  margin: 0 100px 0 0;
-  border-radius: 5px;
-  color: white; }
-
-.h__main--texto h2 {
-  font-family: hs;
-  font-size: 57px; }
-
-.h__main--texto h3 {
-  font-family: hs;
-  font-size: 57px; }
-
-.h__main--texto h4 {
-  font-family: hs;
-  font-size: 57px; }
-
-.h__main--texto p {
-  text-align: justify;
-  font-family: garetbook;
-  font-size: 15px;
-  line-height: 1.5; }
-
-.debajo {
-  font-family: hs;
-  font-size: 27px;
-  color: white;
-  margin: 0 60px; }
+@media screen and (max-width: 650px) {
+  .h__main {
+    flex-direction: column;
+    justify-content: center;
+    height: auto; }
+  img {
+    width: 100%;
+    height: auto;
+    justify-content: center; }
+  .h__main--texto {
+    justify-content: center; } }
 
 /*____________________________________________________________________________________________________________*/
 /* Estilos para el NOSOTRAS*/

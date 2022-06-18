@@ -13,3 +13,10 @@
     flex-direction: column;
     align-items: flex-end;
 }
+@import "variables";
+
+@mixin mobile {
+    @media screen and (max-width:#{mobile}){
+        @content;
+    }
+}

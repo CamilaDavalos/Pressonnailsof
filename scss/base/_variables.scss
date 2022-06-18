@@ -5,3 +5,7 @@ $color-complemento: grey;
 $color-fondo: white;
 $color-footer: #ad8f94;
 $border: 3px solid grey;
+
+$colors: (caja: rgb(205, 158, 155), caja-light:ligthen(rgb(205, 158, 155), 45%),caja-dark:darken(rgb(205, 158, 155),45%));
+
+$mobile: 650px;
