@@ -2,7 +2,7 @@
 @import "base/variables";
 @import "base/mixins";
 
-@function color($color-name){
+@function color($color-name) {
     @return map-get($colors, $color-name)
 }
 
@@ -99,22 +99,23 @@
         justify-content: center;
         background-color: $color-logo;
         margin: 10vh 0 10vh 0;
-    }
 
-    .logo__main img {
-        height: 75vh;
-        width: auto;
+        img {
+            height: 75vh;
+            width: auto;
+        }
     }
 
     .carousel {
         @extend.logo__main;
         margin: 0 0 10vh 0;
+
+        .imgmain {
+            height: 75vh;
+            width: 47vw;
+        }
     }
 
-    .imgmain {
-        height: 75vh;
-        width: 47vw;
-    }
 }
 
 /*Estilo para el footer*/
@@ -224,19 +225,24 @@
         .logo__main {
             height: 45vh;
             margin: 4vh 0 4vh 0;
-        }
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
-                height: 45vh;
+                height: 30vh;
+                width: auto;
             }
+        }
 
         .carousel {
             height: 45vh;
-            margin-bottom: 4vh;
-        }
+            margin: 0;
 
-        .imgmain {
-            height: 45vh;
+            .imgmain {
+                height: 45vh;
+                width: 90vw;
+            }
         }
     }
 
@@ -255,14 +261,14 @@
 
     &__iconos {
         width: 4vw;
-        margin-top: 0.5vh
-    }
+        margin-top: 0.5vh;
 
-        figure img {
-            height: 4vh;
+        figure a img {
+            height: 4.5vh;
             width: auto;
-            padding: 0 2vw 0 2vw
+            padding: 0 2.5vw;
         }
+    }
 }
 
 /* Queries para celulares */
@@ -313,12 +319,12 @@
             position: fixed
         }
 
-            ul li a {
-                text-transform: uppercase;
-                text-decoration: none;
-                font-size: 5vw;
-                color: black;
-            }
+        ul li a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 5vw;
+            color: black;
+        }
     }
 
     /* Estilos para el main */
@@ -328,19 +334,21 @@
         .logo__main {
             height: 35vh;
             margin: 3vh 0 3vh 0;
-        }
+
 
             img {
-                height: 35vh;
+                height: 60vw;
+                width: auto;
             }
+        }
 
         .carousel {
             height: 35vh;
             margin-bottom: 3vh;
-        }
 
-        .imgmain {
-            height: 35vh;
+            .imgmain {
+                height: 35vh;
+            }
         }
     }
 
@@ -356,322 +364,38 @@
         }
 
         &__iconos {
-            width: 5vw;
-        }
+            width: 50vw;
 
-            figure img {
-                height: 5vw;
-                width: auto;
-                padding: 0 2vw 0 2vw
+            figure a img {
+                height: 200px;
+                width: 200px;
+                margin: 0 2vw;
             }
+        }
     }
 }
 
 /*_______________________________________________________________________________*/
+/*Estilos para la página HOME*/
 
-/* Estilos para la página HOME */
+@import "componentes/home";
 
-.home__main {
-    background-color: color(caja-light);
-    border-bottom: $border;
-    @include flexmain;
-    overflow: hidden;
-}
+/*_______________________________________________________________________________*/
 
-.h__main {
-    display: flex;
-    flex-direction: row;
-    margin: 80px 0 20px 0;
-    height: 75vh;
-    background-color: color(caja);
-    box-shadow: 1px 5px 25px $color-logo;
-
-    img {
-        justify-content: flex-start;
-        margin-left: 5%;
-        margin-top: 3%;
-        height: 60vh;
-        width: 52vw;
-        border-radius: 5%;
-        figcaption{
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: flex-end;
-            font-family: hs;
-            font-size: 5vh;
-            color: $color-fondo;
-            margin-left: 20%;
-        } 
-    }
-
-    &--texto{
-        justify-content: end;
-        height: 60vh;
-        color: $color-fondo;
-        margin-right: 5%;
-        width: 60vw;
-        align-items: center;
-
-        h2, h3, h4{
-            font-family: hs;
-            font-size: 8vh;
-        }
-        p{
-            text-align: justify;
-            font-family: garetbook;
-            font-size: 3vh;
-            line-height: 1.5;
-        }
-    }
-}
-
-@media screen and (max-width:1024px){
-   .h__main{
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-   }
-}
-@media screen and (max-width:650px) {
-    .h__main{
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-    }
-    img{
-        width: 100%;
-        height: auto;
-        justify-content: center;
-    }
-    .h__main--texto{
-        justify-content: center;
-    }
-}
-
-
-/*____________________________________________________________________________________________________________*/
 /* Estilos para el NOSOTRAS*/
-.n__main {
-    background-color: $color-fondo;
-    border-bottom: $border;
-    overflow: hidden;
-    height: 200vh;
-    display: flex;
 
-    .n__main--uno {
-        @include flexmain;
-        margin: 15vh 0 15vh 0;
-        height: 170vh;
-        background-color: rgb(205, 158, 155);
-    }
+@import "componentes/nosotras";
 
-    h1 {
-        font-family: hs;
-        font-size: 8rem;
-        color: $color-fondo;
-        text-align: center;
-        top: 0;
-    }
-
-    p {
-        text-align: justify;
-        font-family: garetbook;
-        font-size: 1.6rem;
-        line-height: 1.5;
-        color: $color-fondo;
-    }
-
-    figure {
-        display: flex;
-        justify-content: center;
-    }
-
-    .imgmain {
-        height: 80vh;
-        width: auto;
-        border-radius: 5%;
-        text-align: center;
-    }
-
-}
-@media screen and (max-width:1024px){
-    .n__main{
-        height: 230vh;
-        .n__main--uno {
-        height: 200vh;
-        }
-    }
-
-    .imgmain {
-        height: auto;
-    }
-    p{
-        font-size: 0.7rem;
-        padding: 0 1vh 0 1vh;
-    }
-    h1{
-        font-size: 3rem;
-    }
-}
-@media screen and (max-width:650px) {
-    .n__main{
-        height: 250vh;
-        background-color: rgb(205, 158, 155);
-    }
-    .n__main--uno {
-        height: 250vh;
-        margin-top: 0;
-        }
-
-    .imgmain {
-        height: 6rem;
-    }
-    p{
-        font-size: 1vh;
-        padding: 0 1vh 0 1vh;
-    }
-    h1{
-        font-size: 1vh;
-        padding-top: 0;
-    }
-}
+/*_______________________________________________________________________________*/
 
 /* Estilos para el PRODUCTO*/
-.p__main {
-    @include flexmain;
-    background-color: $color-fondo;
-    border-bottom: $border;
-    overflow: hidden;
-    height: 200vh;
-    &--dv {
-        margin: 80px 0 20px 0;
-        height: 200px;
-        background-color: rgb(205, 158, 155);
-        box-shadow: 1px 5px 25px $color-logo;
-    }
-        h1{
-            font-family: hs;
-            font-size: 100px;
-            top: 150px;
-            margin: 0 100px 0 0;
-            border-radius: 5px;
-            color: $color-fondo;
-            text-align: center;
-        }
-        p {
-            text-align: justify;
-            font-family: garetbook;
-            font-size: 20px;
-            line-height: 1.5;
-            color: $color-fondo;
-            text-align: center;
-        }
-    .p__mv {
-        margin: 80px 0 20px 0;
-        height: 450px;
-        background-color: $color-complemento;
-        box-shadow: 1px 5px 25px $color-logo;
-        text-align: center;
-    }
-        .video {
-            top: 30px;
-            left: 0;
-            margin: 25px 70px;
-            height: 400px;
-            width: auto;
-            text-align: right
-        }
-}
-@media screen and (max-width:1024px){
-    .p__main{
-        height: 170vh;
-        background-color: $color-complemento;
-    }
-    .p__main--dv{
-        height: 50vh;
-    }
-    .p__mv{
-        margin-bottom: 0;
-        box-shadow: none;
-    }
 
-}
-@media screen and (max-width:650px) {
-    .p__main{
-        height: 200vh;
-        background-color: $color-complemento;
-    }
-    .p__main--dv{
-        height: 90vh;
-    }
-    
-    .p__mv{
-        margin-bottom: 0;
-        box-shadow: none;
-    }
-}
+@import "componentes/productos";
+
+/*_______________________________________________________________________________*/
 
 /* Estilos para el CONTACTO*/
 
-.cmain {
-    @include flexmain;
-    background-color: $color-complemento;
-    border-bottom: 3px solid $color-fondo;
-    overflow: hidden;
-    height: 800px;
-    h1 {
-        font-family: garetbook;
-        font-size: 40px;
-        top: 250px;
-        margin: 25px 70px;
-        border-radius: 5px;
-        color: $color-fondo;
-        text-align: center;
-    }
-    .main__fa {
-        width: 500px;
-        height: 700px;
-        margin: 0 auto;
-        padding: 10px;
-    }
-    
-    .main__f {
-        margin: 30px 0;
-    }
-    
-        label,
-        textarea,
-        input {
-            display: block;
-            margin: 5px;
-        }
-    
-        label {
-        color: $color-fondo;
-        font-family: garetbook;
-        font-size: 25px;
-        }
-    
-    .main__input {
-        height: 30px;
-        width: 450px;
-        color: $color-logo;
-        font-family: garetheavy;
-        font-size: 17px;
-        font-weight: 700;
-        padding: 5px;
-    }
-    
-    .main__men {
-        width: 450px;
-        height: 100px;
-        color: $color-logo;
-        font-family: garetheavy;
-        font-size: 15px;
-        font-weight: 700;
-        padding: 5px;
-    }
-}
+@import "componentes/contacto";
 
 /*----------------------------------------------------------------------------------------------------------------*/

@@ -1,0 +1,139 @@
+/* Estilos para PRODUCTOS*/
+
+.p__main {
+    display: flex;
+    flex-direction: column;
+    border: $border;
+
+    .p__videos{
+        order: 100;
+        background: rgb(248, 226, 222);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom: 1vh;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2{
+                font-family: garetbook;
+                color: $color-complemento;
+                font-size: 2.7vw;
+                margin-top: 0.5rem;
+            }
+
+            div{
+                iframe{
+                    height: 20vw;
+                    width: 30vw;
+                }
+            }
+        }
+    }
+
+    h1{
+        font-family: hs;
+        color: $color-complemento;
+        text-align: center;
+        font-size: 8vw;
+    }
+
+    .p__img{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 3rem;
+
+        div{
+            margin: 1em;
+            padding: 2em;
+            width: 30%;
+            border-radius: 2%;
+            box-shadow: 5px 10px 5px color(caja);
+
+            img{
+                width: 25vw;
+                height: 20vw;
+            }
+
+            h4{
+                font-family: garetbook;
+                color: $color-complemento;
+                text-align: center;
+                padding-top: 0.5rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .p__main {
+    
+        .p__img{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+    
+            div{    
+                width: 30vw;
+                margin-left: 8vw;
+                img{
+                    width: 25vw;
+                    height: 20vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .p__main {
+    
+        .p__videos{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            div{
+    
+                h2{
+                    font-size: 6vw;
+                }
+    
+                div{
+                    iframe{
+                        height: 40vw;
+                        width: 60vw;
+                    }
+                }
+            }
+        }
+    
+        h1{
+            font-size: 25vw;
+        }
+    
+        .p__img{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+            div{
+                width: 90vw;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                img{
+                    width: 60vw;
+                    height: 40vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+/* Estilos para la página HOME */
+
+.home__main {
+    background-color: color(caja-light);
+    border-bottom: $border;
+    @include flexmain;
+    overflow: hidden;
+
+    div {
+        display: grid;
+        grid-template-areas: "img img txt";
+        background-color: color(caja);
+        margin-bottom: 3vh;
+
+        figure {
+            grid-area: img;
+            @include flexmain;
+            margin: 2vh 2vw 0 2vw;
+
+            img {
+                align-self: center;
+                height: 60vh;
+                width: 52vw;
+                margin-bottom: 1vh;
+                border-radius: 3%;
+            }
+
+            figcaption {
+                align-self: center;
+                color: $color-fondo;
+                font-family: hs;
+                font-size: 5vh;
+            }
+        }
+
+        div {
+            grid-area: txt;
+            @include flexmain;
+            align-items: center;
+            color: $color-fondo;
+            padding-right: 1vw;
+
+            h2 {
+                margin-top: 5vh;
+                font-family: hs;
+                font-size: 8vh;
+            }
+
+            p {
+                text-align: justify;
+                font-family: garetbook;
+                font-size: 3vh;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home__main {
+
+        div {
+            grid-template-areas: "img"
+                                 "txt";
+            figure {
+                margin: 0;
+
+                img {
+                    height: auto;
+                    width: 100vw;
+                    padding: 0;
+                    border-radius: 0;
+                }
+
+                figcaption {
+                    font-size: 4vh;
+                }
+            }
+
+            div{
+                padding: 0 2vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .home__main {
+    
+        div {
+    
+            figure {
+    
+                figcaption {
+                    font-size: 4vh;
+                }
+            }
+    
+            div {
+    
+                h2 {
+                    font-size: 13vw;
+                }
+    
+                p {
+                    font-size: 2.5vh;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    
+}
